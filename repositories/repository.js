@@ -21,7 +21,7 @@ module.exports = class Repository {
     // Get all existing records
     const records = await this.getAll();
     // Add in new record with id attached to it
-    records.push(attr);
+    records.push(attrs);
 
     // write all records to hard drive
     await this.writeAll(records);
