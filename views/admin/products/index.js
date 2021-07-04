@@ -2,13 +2,13 @@ const layout = require('../layout');
 
 module.exports = ({ products }) => {
   const renderedProducts = products
-    .map((product) => {
+    .map(({ title, price, id }) => {
       return `
       <tr>
-        <td>${product.title}</td>
-        <td>${product.price}</td>
+        <td>${title}</td>
+        <td>${price}</td>
         <td>
-          <a href="">
+          <a href="/admin/products/${id}/edit">
             <button class="button is-link">
               Edit
             </button>
